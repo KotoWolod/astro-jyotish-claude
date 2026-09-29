@@ -13,9 +13,14 @@ Use the authenticated chart image capability. Display the returned images direct
 - South Indian D-1 Rasi chart
 - South Indian D-9 Navamsha chart
 
-Render the returned chart images in the final answer with Markdown image syntax, using the returned `markdown` value or the `chartImages[].url` values. Do not save image blocks to local files. Image URLs expire after a short time; if the user asks to see them again later, call the chart image capability again. Do not merely list image names.
+The chart image capability returns each chart as a PNG image block and as a short-lived URL. How to show them depends on the Claude surface:
 
-Never claim that chart images were shown unless the final assistant message itself contains visible Markdown image tags. If image rendering is unavailable, say that the images were generated but could not be displayed here.
+- If the tool result gives a local file path for each image (Claude Code saves MCP image blocks as local PNG files and shows `[Image: source: <path>]`), show each chart as a Markdown link to that local file, labelled with the chart title, for example `[Round D-1 Rasi chart](<path>)`. Claude Code does not display remote Markdown images, so do not print the returned `markdown` or `chartImages[].url` values there.
+- Otherwise (Claude desktop chat or claude.ai), the images are already visible in the tool result. Render them in the final answer with Markdown image syntax using the returned `markdown` value or the `chartImages[].url` values.
+
+Never print raw signed image URLs as plain text. Image URLs expire after a short time; if the user asks to see the charts again later, call the chart image capability again.
+
+Never claim that chart images were shown unless the final assistant message itself contains the image links or Markdown image tags described above. If image rendering is unavailable, say that the images were generated but could not be displayed here.
 
 If the previous visible result was these four chart images and the user replies with `1`, `2`, `3`, or `4`, show only the selected image:
 
