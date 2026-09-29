@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "astro-jyotish": {
+      "type": "http",
+      "url": "https://mcp.hidden-world.space/mcp"
+    }
+  }
+}
