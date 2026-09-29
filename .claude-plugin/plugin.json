@@ -1,6 +1,6 @@
 {
   "name": "astro-jyotish",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Astro Jyotish by professional astrologer Volodymyr Kraine with 20+ years of experience: connect a Hidden World account for saved Jyotish charts, D-1 and D-9 chart images, natal interpretation, forecasts, Prashna, Panchanga, and questions to Kraine AI.",
   "author": {
     "name": "Volodymyr Kraine / Hidden World",
@@ -17,5 +17,7 @@
     "panchanga",
     "forecast"
   ],
-  "repository": "https://github.com/KotoWolod/astro-jyotish-claude"
+  "repository": "https://github.com/KotoWolod/astro-jyotish-claude",
+  "icon": "./assets/icon.png",
+  "privacyPolicyUrl": "https://hidden-world.space/en/policy"
 }
