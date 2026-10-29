@@ -17,6 +17,7 @@ For each service show its command, purpose, required user data, defaults, and pr
 - `/astro-charts`: connected account; shows saved charts and the active chart.
 - `/astro-set-active-chart`: connected account and chart selection; sets the active saved chart.
 - `/astro-natal`: active saved natal chart; choose language and Parashara/Kraine; optional Kraine focus house 1-12.
+- `/astro-pdf`: active saved natal chart and verified email; complete Kraine PDF in English, Russian, or Ukrainian; charged in stars at the current server price, not subscription requests; result delivered to email and saved profile.
 - `/astro-forecast`: active saved natal chart; choose language and Parashara/Kraine; forecast moment defaults to now; place defaults to the active chart place.
 - `/astro-prashna`: concrete question; choose language and Parashara/Kraine; moment defaults to now; current place is required when it cannot be resolved.
 - `/astro-panchanga`: choose language and Parashara/Kraine; date defaults to today; place defaults to the active chart place.
@@ -58,5 +59,6 @@ Include these Markdown links:
 - [Prashna help](https://hidden-world.space/en/articles/site_help_prashna)
 - [Panchanga help](https://hidden-world.space/en/articles/site_help_panchanga)
 - [Hidden World profile](https://hidden-world.space/en/profile)
+- [Complete natal PDF](https://hidden-world.space/en/services?service=chart-report)
 
 Do not show backend operation names, raw service identifiers, payload requirements, or routing details.

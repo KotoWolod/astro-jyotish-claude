@@ -32,13 +32,18 @@ Halloween offer: Enter promo code `halloween2026` on the [promo code page](https
 `/astro-contact` - send a confirmed message to Hidden World support ([Contact support](https://hidden-world.space/en/contacts))
 `/astro-services` - view services, requirements, and current prices ([Services](https://hidden-world.space/en/services))
 `/astro-natal` - choose language and Parashara/Kraine, then interpret your active natal chart ([How it works](https://hidden-world.space/en/articles/site_help_interpretation))
+`/astro-pdf` - order, track, and download a complete Kraine natal PDF for your active chart; paid with stars, not subscription requests ([Full PDF](https://hidden-world.space/en/services?service=chart-report))
 `/astro-forecast` - choose language and Parashara/Kraine, then create a forecast from your active natal chart ([How it works](https://hidden-world.space/en/articles/site_help_forecast))
 `/astro-prashna` - choose language and Parashara/Kraine, then ask a concrete question using a question chart ([How it works](https://hidden-world.space/en/articles/site_help_prashna))
 `/astro-panchanga` - choose language and Parashara/Kraine, then view Panchanga for a date and place ([How it works](https://hidden-world.space/en/articles/site_help_panchanga))
-`/astro-lunar-calendar` - show the free Kyiv lunar calendar in chat for today, a date, or a published month ([Calendar](https://hidden-world.space/en/lunar-calendar))
+`/astro-lunar-calendar` - show the free full current-month Kyiv lunar calendar, key dates, and best days; ask for a specific date or month too ([Calendar](https://hidden-world.space/en/lunar-calendar))
 `/astro-sade-sati` - calculate Sade Sati for your active chart; one free calculation without a subscription ([How it works](https://hidden-world.space/en/articles/sade_sati))
 `/astro-question` - choose language, then ask the Kraine AI astrologer about your active chart
 `/astro-referral` - view the inviter-email referral program and your status; submitting an inviter's email to claim a bonus requires your confirmation
+
+## Calendar and Rhythmeter
+
+The free lunar calendar gives the general Kyiv day and month picture in chat. For personal timing based on your natal chart, dasha, and residence, open [Rhythmeter](https://hidden-world.space/en/services/ritometer) on the website. Rhythmeter does not have a plugin command yet.
 
 ## Plain-language shortcuts
 
@@ -59,6 +64,7 @@ You can also ask in plain English:
 - Calculate Sade Sati for my active chart on <date> in Ukrainian.
 - Create a Kraine forecast in Russian for 2026-09-01.
 - Interpret my active natal chart with Kraine in Russian, focus on house 10.
+- Order the complete natal PDF in Russian for my active chart.
 - Create a Kraine Prashna question chart in Russian for this situation: <your question>.
 - Ask Kraine AI about my active natal chart in Russian: <your question about my chart>.
 

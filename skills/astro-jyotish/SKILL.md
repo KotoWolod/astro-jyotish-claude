@@ -1,6 +1,6 @@
 ---
 name: astro-jyotish
-description: "Use whenever the user writes an Astro Jyotish slash command (`/astro-help`, `/astro-login`, `/astro-status`, `/astro-services`, `/astro-chart-setup`, `/astro-create-chart`, `/astro-charts`, `/astro-chart-images`, `/astro-set-active-chart`, `/astro-contact`, `/astro-natal`, `/astro-forecast`, `/astro-prashna`, `/astro-panchanga`, `/astro-lunar-calendar`, `/astro-sade-sati`, `/astro-referral`, or `/astro-question`) or asks to connect a Hidden World account, use its inviter-email referral program, contact Hidden World support, or use Astro Jyotish by professional astrologer Volodymyr Kraine with 20+ years of experience."
+description: "Use whenever the user writes an Astro Jyotish slash command (`/astro-help`, `/astro-login`, `/astro-status`, `/astro-services`, `/astro-chart-setup`, `/astro-create-chart`, `/astro-charts`, `/astro-chart-images`, `/astro-set-active-chart`, `/astro-contact`, `/astro-natal`, `/astro-pdf`, `/astro-forecast`, `/astro-prashna`, `/astro-panchanga`, `/astro-lunar-calendar`, `/astro-sade-sati`, `/astro-referral`, or `/astro-question`) or asks to connect a Hidden World account, use its inviter-email referral program, contact Hidden World support, or use Astro Jyotish by professional astrologer Volodymyr Kraine with 20+ years of experience."
 ---
 
 # Astro Jyotish
@@ -48,10 +48,11 @@ For presentation-only commands, the command text itself supplies the intent. Do 
 - `/astro-set-active-chart`: select which saved chart is active.
 - `/astro-contact`: send one confirmed support message from the connected account.
 - `/astro-natal`: run natal interpretation for the active saved chart.
+- `/astro-pdf`: order, track, and download the complete Kraine natal PDF for the active chart.
 - `/astro-forecast`: run a forecast from the active natal chart.
 - `/astro-prashna`: answer a concrete question from its question chart.
 - `/astro-panchanga`: show Panchanga for a date and place.
-- `/astro-lunar-calendar`: show the free public Kyiv lunar calendar data in chat for today, a date, or a published month.
+- `/astro-lunar-calendar`: show the free public Kyiv lunar calendar in chat; without a date, show the complete current month and its available views.
 - `/astro-sade-sati`: calculate Sade Sati from the active saved chart using one free account trial or an active subscription.
 - `/astro-question`: ask the Kraine AI astrologer about the active saved chart.
 - `/astro-referral`: show authenticated referral status and explain the inviter-email program; applying requires separate explicit confirmation.
@@ -195,6 +196,7 @@ Use the dedicated tool that matches the command:
 - `/astro-set-active-chart` -> `astro_set_active_chart`
 - `/astro-contact` -> `astro_contact`
 - `/astro-natal` -> `astro_natal`
+- `/astro-pdf` -> `astro_pdf_quote`, then `astro_pdf_order` only after explicit cost confirmation; use `astro_pdf_orders`, `astro_pdf_status`, `astro_pdf_download`, or `astro_pdf_email` for existing orders
 - `/astro-forecast` -> `astro_forecast`
 - `/astro-prashna` -> `astro_prashna`
 - `/astro-panchanga` -> `astro_panchanga`
@@ -204,6 +206,10 @@ Use the dedicated tool that matches the command:
 - `/astro-referral` -> `astro_referral_status({language})`; a separately confirmed claim -> `astro_referral_apply({inviterEmail, confirmed: true, language})`
 
 If a dedicated service tool returns a pending `requestId`, use `astro_result({requestId, language})` for that same request until it completes or fails. Pass the explicitly chosen service language (`en`, `ru`, or `ua`) on every poll, including recovery reads; do not omit the optional language argument and allow balance messages to default to English. Never switch to a generic RPC tool and never construct a service payload in the model.
+
+For `/astro-lunar-calendar` without a date or month, call `astro_lunar_calendar({language})` to obtain the current Kyiv date, then call `astro_lunar_calendar({month: YYYY-MM, language})` for that date's month. Present every monthly day row, key lunar events, favorable/unfavorable dates, best days by activity, and a detailed current day from the returned data. For an explicitly requested month, call the month view and include every day row; do not silently reduce it to highlights. For an explicitly requested day, present its full day details and changes. In all three cases, add a compact help section explaining the other views, with a clickable public calendar link. Follow the command's calendar presentation contract; the one-day response is not a complete calendar.
+
+For `/astro-pdf`, show the quote for the active chart in the explicitly chosen output language. The full PDF is a separate Kraine product paid with stars, never subscription requests. Require a verified email and the user's confirmation of the quoted chart, language, theme, and exact star cost. Reuse one stable client request ID on a retry and check existing orders before any repeated call. Poll only the same order ID; never run another paid interpretation to construct the PDF. A completed order gets a short-lived clickable download link. Email resend requires separate confirmation.
 
 Do not request token environment variables or expose authentication material. When the account is unavailable, run the documented login flow or ask for the single missing user input; do not simulate a successful paid service.
 
@@ -219,9 +225,12 @@ Approved public links:
 - [Hidden World profile](https://hidden-world.space/en/profile)
 - [Hidden World contacts](https://hidden-world.space/en/contacts)
 - [Natal interpretation help](https://hidden-world.space/en/articles/site_help_interpretation)
+- [Complete natal PDF](https://hidden-world.space/en/services?service=chart-report)
 - [Forecast help](https://hidden-world.space/en/articles/site_help_forecast)
 - [Prashna help](https://hidden-world.space/en/articles/site_help_prashna)
 - [Panchanga help](https://hidden-world.space/en/articles/site_help_panchanga)
+- [Lunar calendar](https://hidden-world.space/en/lunar-calendar)
+- [Rhythmeter](https://hidden-world.space/en/services/ritometer)
 
 ## Exact Help Menu
 
@@ -253,13 +262,18 @@ Halloween offer: Enter promo code `halloween2026` on the [promo code page](https
 `/astro-contact` - send a confirmed message to Hidden World support ([Contact support](https://hidden-world.space/en/contacts))
 `/astro-services` - view services, requirements, and current prices ([Services](https://hidden-world.space/en/services))
 `/astro-natal` - choose language and Parashara/Kraine, then interpret your active natal chart ([How it works](https://hidden-world.space/en/articles/site_help_interpretation))
+`/astro-pdf` - order, track, and download a complete Kraine natal PDF for your active chart; paid with stars, not subscription requests ([Full PDF](https://hidden-world.space/en/services?service=chart-report))
 `/astro-forecast` - choose language and Parashara/Kraine, then create a forecast from your active natal chart ([How it works](https://hidden-world.space/en/articles/site_help_forecast))
 `/astro-prashna` - choose language and Parashara/Kraine, then ask a concrete question using a question chart ([How it works](https://hidden-world.space/en/articles/site_help_prashna))
 `/astro-panchanga` - choose language and Parashara/Kraine, then view Panchanga for a date and place ([How it works](https://hidden-world.space/en/articles/site_help_panchanga))
-`/astro-lunar-calendar` - show the free Kyiv lunar calendar in chat for today, a date, or a published month ([Calendar](https://hidden-world.space/en/lunar-calendar))
+`/astro-lunar-calendar` - show the free full current-month Kyiv lunar calendar, key dates, and best days; ask for a specific date or month too ([Calendar](https://hidden-world.space/en/lunar-calendar))
 `/astro-sade-sati` - calculate Sade Sati for your active chart; one free calculation without a subscription ([How it works](https://hidden-world.space/en/articles/sade_sati))
 `/astro-question` - choose language, then ask the Kraine AI astrologer about your active chart
 `/astro-referral` - view the inviter-email referral program and your status; submitting an inviter's email to claim a bonus requires your confirmation
+
+## Calendar and Rhythmeter
+
+The free lunar calendar gives the general Kyiv day and month picture in chat. For personal timing based on your natal chart, dasha, and residence, open [Rhythmeter](https://hidden-world.space/en/services/ritometer) on the website. Rhythmeter does not have a plugin command yet.
 
 ## Plain-language shortcuts
 
@@ -280,6 +294,7 @@ You can also ask in plain English:
 - Calculate Sade Sati for my active chart on <date> in Ukrainian.
 - Create a Kraine forecast in Russian for 2026-09-01.
 - Interpret my active natal chart with Kraine in Russian, focus on house 10.
+- Order the complete natal PDF in Russian for my active chart.
 - Create a Kraine Prashna question chart in Russian for this situation: <your question>.
 - Ask Kraine AI about my active natal chart in Russian: <your question about my chart>.
 
