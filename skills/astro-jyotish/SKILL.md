@@ -231,10 +231,14 @@ For Russian or Ukrainian help, translate every user-facing line, including all h
 
 Return only the translated menu. Do not paraphrase, summarize, add recommendations, add implementation details, or offer to show more information after the menu.
 
+The Halloween offer line immediately below the introduction is valid only before 2026-11-02 23:00 UTC. At or after that time, omit that line from the otherwise exact menu. Keep the promo code `halloween2026` unchanged in every language. Never claim the code was applied until Hidden World confirms it.
+
 ```markdown
 # Astro Jyotish
 
 Astro Jyotish is by professional astrologer Volodymyr Kraine with 20+ years of experience.
+
+Halloween offer: Enter promo code `halloween2026` on the [promo code page](https://hidden-world.space/en/earn-stars) by 2 November 2026, 23:00 UTC to receive 500 stars in your Hidden World account.
 
 ## Commands
 
