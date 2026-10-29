@@ -20,6 +20,8 @@ For each service show its command, purpose, required user data, defaults, and pr
 - `/astro-forecast`: active saved natal chart; choose language and Parashara/Kraine; forecast moment defaults to now; place defaults to the active chart place.
 - `/astro-prashna`: concrete question; choose language and Parashara/Kraine; moment defaults to now; current place is required when it cannot be resolved.
 - `/astro-panchanga`: choose language and Parashara/Kraine; date defaults to today; place defaults to the active chart place.
+- `/astro-lunar-calendar`: connected account; free public Kyiv lunar calendar for today, a date, or a published month; no chart, stars, or subscription needed.
+- `/astro-sade-sati`: connected account and active saved chart; one free calculation without a subscription, then active subscription access; no stars or subscription requests are consumed.
 - `/astro-question`: active saved natal chart, explicit language, and subscription access; Kraine-only AI astrologer question.
 
 Choice values:
@@ -36,6 +38,8 @@ Natural-language examples:
 - "Make the saved chart named \"<chart name>\" active."
 - "Make Kraine Panchanga in Russian for today."
 - "Make Parashara Panchanga in English for tomorrow in Pirovac, Croatia."
+- "Show the lunar calendar for today in English."
+- "Calculate Sade Sati for my active chart on <date> in Russian."
 - "Create a Kraine forecast in Russian for 2026-09-01."
 - "Interpret my active natal chart with Kraine in Russian, focus on house 10."
 - "Create a Kraine Prashna question chart in Russian for this situation: <question>."

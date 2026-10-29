@@ -7,6 +7,8 @@ Astro Jyotish connects a Hidden World account to Vedic astrology (Jyotish) servi
 - Create, calculate, save, and activate natal charts from birth data, and switch the active chart.
 - Show active chart images: round and South Indian D-1 Rasi and D-9 Navamsha.
 - Run natal interpretation, transit forecasts, Prashna (question charts), and Panchanga.
+- Calculate Sade Sati for the active chart: one free calculation per account, then included with a subscription.
+- Show the free Kyiv lunar calendar for today, a date, or a published month.
 - Ask the Kraine AI astrologer about the active saved chart.
 - Show account status, stars, subscription requests, and inviter-email referral status.
 - Send one confirmed support message to Hidden World.
@@ -26,7 +28,7 @@ Then connect your account with `/astro-login`, or run `/mcp`, choose `astro-jyot
 
 ## Commands
 
-`/astro-help`, `/astro-login`, `/astro-status`, `/astro-services`, `/astro-chart-setup`, `/astro-create-chart`, `/astro-charts`, `/astro-chart-images`, `/astro-set-active-chart`, `/astro-contact`, `/astro-natal`, `/astro-forecast`, `/astro-prashna`, `/astro-panchanga`, `/astro-question`, `/astro-referral`.
+`/astro-help`, `/astro-login`, `/astro-status`, `/astro-services`, `/astro-chart-setup`, `/astro-create-chart`, `/astro-charts`, `/astro-chart-images`, `/astro-set-active-chart`, `/astro-contact`, `/astro-natal`, `/astro-forecast`, `/astro-prashna`, `/astro-panchanga`, `/astro-lunar-calendar`, `/astro-sade-sati`, `/astro-question`, `/astro-referral`.
 
 You can also ask in natural language, for example "Show my active chart images", "Make Kraine Panchanga in Russian for today", or "Create a Kraine Prashna in English: Should I accept this offer?".
 
@@ -39,6 +41,8 @@ Access uses OAuth 2.0 with PKCE. Your Hidden World password never passes through
 ## Stars and subscriptions
 
 Paid services use stars or subscription requests that already exist in your Hidden World account. The plugin does not sell subscriptions, credits, or digital services and never starts a checkout. Before a service spends an existing entitlement, Claude shows the server-provided cost and asks you to confirm the exact request. When a subscription is active, it is used before stars.
+
+The lunar calendar is free. Sade Sati gives one free calculation per account without a subscription and is included with an active subscription; neither spends stars or subscription requests.
 
 ## Links
 

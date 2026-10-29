@@ -31,6 +31,8 @@ Astro Jyotish is by professional astrologer Volodymyr Kraine with 20+ years of e
 `/astro-forecast` - choose language and Parashara/Kraine, then create a forecast from your active natal chart ([How it works](https://hidden-world.space/en/articles/site_help_forecast))
 `/astro-prashna` - choose language and Parashara/Kraine, then ask a concrete question using a question chart ([How it works](https://hidden-world.space/en/articles/site_help_prashna))
 `/astro-panchanga` - choose language and Parashara/Kraine, then view Panchanga for a date and place ([How it works](https://hidden-world.space/en/articles/site_help_panchanga))
+`/astro-lunar-calendar` - show the free Kyiv lunar calendar in chat for today, a date, or a published month ([Calendar](https://hidden-world.space/en/lunar-calendar))
+`/astro-sade-sati` - calculate Sade Sati for your active chart; one free calculation without a subscription ([How it works](https://hidden-world.space/en/articles/sade_sati))
 `/astro-question` - choose language, then ask the Kraine AI astrologer about your active chart
 `/astro-referral` - view the inviter-email referral program and your status; submitting an inviter's email to claim a bonus requires your confirmation
 
@@ -48,6 +50,9 @@ You can also ask in plain English:
 - Contact Hidden World support about <subject>: <your message>.
 - Make Kraine Panchanga in Russian for today.
 - Make Parashara Panchanga in English for tomorrow in Pirovac, Croatia.
+- Show the free lunar calendar for today in English.
+- Show the lunar calendar for October 2026 in Russian.
+- Calculate Sade Sati for my active chart on <date> in Ukrainian.
 - Create a Kraine forecast in Russian for 2026-09-01.
 - Interpret my active natal chart with Kraine in Russian, focus on house 10.
 - Create a Kraine Prashna question chart in Russian for this situation: <your question>.

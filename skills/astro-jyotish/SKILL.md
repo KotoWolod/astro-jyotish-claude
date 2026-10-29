@@ -1,6 +1,6 @@
 ---
 name: astro-jyotish
-description: "Use whenever the user writes an Astro Jyotish slash command (`/astro-help`, `/astro-login`, `/astro-status`, `/astro-services`, `/astro-chart-setup`, `/astro-create-chart`, `/astro-charts`, `/astro-chart-images`, `/astro-set-active-chart`, `/astro-contact`, `/astro-natal`, `/astro-forecast`, `/astro-prashna`, `/astro-panchanga`, `/astro-referral`, or `/astro-question`) or asks to connect a Hidden World account, use its inviter-email referral program, contact Hidden World support, or use Astro Jyotish by professional astrologer Volodymyr Kraine with 20+ years of experience."
+description: "Use whenever the user writes an Astro Jyotish slash command (`/astro-help`, `/astro-login`, `/astro-status`, `/astro-services`, `/astro-chart-setup`, `/astro-create-chart`, `/astro-charts`, `/astro-chart-images`, `/astro-set-active-chart`, `/astro-contact`, `/astro-natal`, `/astro-forecast`, `/astro-prashna`, `/astro-panchanga`, `/astro-lunar-calendar`, `/astro-sade-sati`, `/astro-referral`, or `/astro-question`) or asks to connect a Hidden World account, use its inviter-email referral program, contact Hidden World support, or use Astro Jyotish by professional astrologer Volodymyr Kraine with 20+ years of experience."
 ---
 
 # Astro Jyotish
@@ -51,6 +51,8 @@ For presentation-only commands, the command text itself supplies the intent. Do 
 - `/astro-forecast`: run a forecast from the active natal chart.
 - `/astro-prashna`: answer a concrete question from its question chart.
 - `/astro-panchanga`: show Panchanga for a date and place.
+- `/astro-lunar-calendar`: show the free public Kyiv lunar calendar data in chat for today, a date, or a published month.
+- `/astro-sade-sati`: calculate Sade Sati from the active saved chart using one free account trial or an active subscription.
 - `/astro-question`: ask the Kraine AI astrologer about the active saved chart.
 - `/astro-referral`: show authenticated referral status and explain the inviter-email program; applying requires separate explicit confirmation.
 
@@ -196,6 +198,8 @@ Use the dedicated tool that matches the command:
 - `/astro-forecast` -> `astro_forecast`
 - `/astro-prashna` -> `astro_prashna`
 - `/astro-panchanga` -> `astro_panchanga`
+- `/astro-lunar-calendar` -> `astro_lunar_calendar({date?, month?, language})`
+- `/astro-sade-sati` -> `astro_sade_sati({date?, confirmed: true, language})` after checking access and receiving confirmation
 - `/astro-question` -> `astro_question`
 - `/astro-referral` -> `astro_referral_status({language})`; a separately confirmed claim -> `astro_referral_apply({inviterEmail, confirmed: true, language})`
 
@@ -248,6 +252,8 @@ Astro Jyotish is by professional astrologer Volodymyr Kraine with 20+ years of e
 `/astro-forecast` - choose language and Parashara/Kraine, then create a forecast from your active natal chart ([How it works](https://hidden-world.space/en/articles/site_help_forecast))
 `/astro-prashna` - choose language and Parashara/Kraine, then ask a concrete question using a question chart ([How it works](https://hidden-world.space/en/articles/site_help_prashna))
 `/astro-panchanga` - choose language and Parashara/Kraine, then view Panchanga for a date and place ([How it works](https://hidden-world.space/en/articles/site_help_panchanga))
+`/astro-lunar-calendar` - show the free Kyiv lunar calendar in chat for today, a date, or a published month ([Calendar](https://hidden-world.space/en/lunar-calendar))
+`/astro-sade-sati` - calculate Sade Sati for your active chart; one free calculation without a subscription ([How it works](https://hidden-world.space/en/articles/sade_sati))
 `/astro-question` - choose language, then ask the Kraine AI astrologer about your active chart
 `/astro-referral` - view the inviter-email referral program and your status; submitting an inviter's email to claim a bonus requires your confirmation
 
@@ -265,6 +271,9 @@ You can also ask in plain English:
 - Contact Hidden World support about <subject>: <your message>.
 - Make Kraine Panchanga in Russian for today.
 - Make Parashara Panchanga in English for tomorrow in Pirovac, Croatia.
+- Show the free lunar calendar for today in English.
+- Show the lunar calendar for October 2026 in Russian.
+- Calculate Sade Sati for my active chart on <date> in Ukrainian.
 - Create a Kraine forecast in Russian for 2026-09-01.
 - Interpret my active natal chart with Kraine in Russian, focus on house 10.
 - Create a Kraine Prashna question chart in Russian for this situation: <your question>.
